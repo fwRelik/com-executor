@@ -1,5 +1,5 @@
 {
-	"name": "com-executer",
+	"name": "com-executor",
 	"version": "0.1.0",
 	"description": "",
 	"main": "index.js",
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/fwRelik/com-executer.git"
+		"url": "git+https://github.com/fwRelik/com-executor.git"
 	},
 	"author": "fwRelik",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/fwRelik/com-executer/issues"
+		"url": "https://github.com/fwRelik/com-executor/issues"
 	},
-	"homepage": "https://github.com/fwRelik/com-executer#readme",
+	"homepage": "https://github.com/fwRelik/com-executor#readme",
 	"dependencies": {
 		"inquirer": "^8.2.0"
 	},
