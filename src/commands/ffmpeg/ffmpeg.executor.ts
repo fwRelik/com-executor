@@ -23,16 +23,19 @@ export class FfmpegExecutor extends CommandExecutor<IFfmpegInput> {
 
 		return { width, height, path, name };
 	}
+
 	protected build({ width, height, path, name }: IFfmpegInput): ICommandExecutorFfmpeg {
 		const output = this.fileService.getFilePath(path, name, 'mp4');
 		const args = new FfmpegBuilder().input(path).setVideoSize(width, height).output(output);
 
 		return { command: 'ffmpeg', args, output };
 	}
+
 	protected spawn({ output, command, args }: ICommandExecutorFfmpeg): ChildProcessWithoutNullStreams {
 		this.fileService.deleteFileExists(output);
 		return spawn(command, args);
 	}
+
 	protected processStream(stream: ChildProcessWithoutNullStreams, logger: IStreamLogger): void {
 		const handler = new StreamHandler(logger);
 		handler.processOutput(stream);
